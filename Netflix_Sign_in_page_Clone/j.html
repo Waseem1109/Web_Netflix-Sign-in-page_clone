@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <div id="BOBO">
+      <h1>HTML DOM Events</h1>
+      <h2>The onclick Event</h2>
+
+      <p>Use the HTML DOM to assign an "onclick" event to a p element:</p>
+      <p id="demo">Click me</p>
+    </div>
+    <script>
+      let cla = document.getElementById("demo");
+      cla.addEventListener("click", BHA);
+      function BHA(e) {
+        let BTN = document.createElement("button");
+        BTN.onclick = function () {
+          MAMA(this);
+        };
+        BTN.textContent="button"
+        cla.parentElement.append(BTN);
+        cla.innerHTML = "YOU CLICKED ME!";
+      }
+      function MAMA(event) {
+        console.log("KIA BAAT HAI")
+      }
+
+    </script>
+  </body>
+</html>
